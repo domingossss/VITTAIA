@@ -1,0 +1,319 @@
+/* SEÇÃO: depoimentos */
+
+/* Regras comuns / computador */
+
+.testimonials {
+  color: #fff;
+  position: relative;
+  isolation: isolate;
+  border-radius: 0;
+  background: radial-gradient(ellipse at center,#24742a,#004320);
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 0;
+  padding-top: 57px;
+  padding-bottom: 57px;
+}
+
+.reviews {
+  display: flex;
+  padding-left: 60px;
+  padding-right: 60px;
+  gap: 38px;
+  align-items: center;
+}
+
+.review-title {
+  flex-shrink: 0;
+  width: 23%;
+}
+
+.review-title h2 {
+  font-size: 36px;
+}
+
+.review-title small {
+  font-size: 9px;
+  opacity: .7;
+}
+
+.swoosh {
+  display: block;
+  width: 190px;
+  border-top: 5px solid var(--yellow);
+  border-radius: 50%;
+  height: 17px;
+  transform: rotate(-3deg);
+  margin-top: 7px;
+}
+
+.review-cards {
+  grid-template-columns: repeat(3,1fr);
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  gap: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-top: 12px;
+  padding-right: 4px;
+  padding-bottom: 16px;
+  padding-left: 4px;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  cursor: grab;
+  touch-action: auto;
+  border-radius: 21px;
+}
+
+.review-cards article {
+  border: 1px solid #c5e5af;
+  background: #ffffff0a;
+  border-radius: 20px;
+  padding-top: 12px;
+  padding-right: 17px;
+  padding-bottom: 12px;
+  padding-left: 17px;
+  box-shadow: inset 0 0 0 3px #ffffff05;
+  display: block!important;
+  flex: 0 0 clamp(265px,26vw,340px);
+  min-width: 0;
+  box-sizing: border-box;
+  min-height: 149px;
+}
+
+.review-cards h3 {
+  font-size: 18px;
+  letter-spacing: -.5px;
+}
+
+.review-cards p {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.25;
+  min-height: 48px;
+}
+
+.review-cards b {
+  font-size: 10px;
+}
+
+.review-cards footer {
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 7px;
+}
+
+.stars {
+  color: var(--yellow);
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 15px;
+}
+
+.dots button {
+  width: 9px;
+  height: 9px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  border: 0;
+  border-radius: 10px;
+  background: #e1edda;
+}
+
+.dots button.active {
+  width: 28px;
+  background: #f2f7e9;
+}
+
+
+.testimonials:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-size: 100% 100%;
+  pointer-events: none;
+  top: -1px;
+  height: 49px;
+  background-image: url('../../assets/shapes/depoimentos-01.svg');
+}
+
+.testimonials:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-size: 100% 100%;
+  pointer-events: none;
+  bottom: -1px;
+  background-image: url('../../assets/shapes/depoimentos-02.svg');
+  height: 49px;
+}
+
+.review-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.review-cards article p {
+  min-height: 55px;
+  line-height: 1.45;
+}
+
+.review-cards.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+  scroll-behavior: auto;
+}
+
+.review-cards:focus-visible {
+  outline: 2px solid #ffcc00;
+  outline-offset: 5px;
+}
+
+.review-hint {
+  display: block;
+  font-size: 11px;
+  color: #e0ebcd;
+  margin-top: 15px;
+  letter-spacing: .2px;
+}
+
+.review-cards article footer {
+  gap: 12px;
+}
+
+.testimonials .dots button {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  transition: width .25s,background .25s;
+}
+
+.testimonials .dots button:before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+}
+
+.testimonials .dots button.active {
+  width: 30px;
+}
+
+
+/* CELULAR — até 780px */
+@media (max-width: 780px) {
+  .testimonials {
+    padding-top: 49px;
+    padding-bottom: 51px;
+  }
+  .reviews {
+    display: block;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .review-title {
+    width: auto;
+  }
+  .review-title h2 {
+    font-size: 30px;
+  }
+  .review-title small {
+    margin-bottom: 0;
+  }
+  .review-cards {
+    grid-template-columns: 1fr;
+    margin-top: 16px;
+    gap: 14px;
+    padding-top: 8px;
+    padding-right: 3px;
+    padding-bottom: 15px;
+    padding-left: 3px;
+  }
+  .review-cards article {
+    flex-basis: 86%;
+    min-height: 170px;
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
+    padding-left: 18px;
+  }
+  .review-cards h3 {
+    font-size: 19px;
+  }
+  .review-cards p {
+    font-size: 13px;
+    min-height: 0;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .review-cards article:not(:first-child) {
+    display: block;
+  }
+  .testimonials:before {
+    height: 36px;
+  }
+  .testimonials:after {
+    height: 36px;
+  }
+  .review-cards article p {
+    font-size: 13px;
+    min-height: 56px;
+  }
+  .review-hint {
+    margin-top: 11px;
+  }
+  .review-cards article h3 {
+    font-size: 18px;
+  }
+}
+
+/* TABLET — 781px a 1100px */
+@media (min-width: 781px) and (max-width: 1100px) {
+  .testimonials {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .reviews {
+    padding-left: 46px;
+    padding-right: 46px;
+    gap: 26px;
+  }
+  .review-title h2 {
+    font-size: 30px;
+  }
+  .review-cards article {
+    padding-top: 10px;
+    padding-right: 14px;
+    padding-bottom: 10px;
+    padding-left: 14px;
+  }
+  .review-cards h3 {
+    font-size: 14px;
+  }
+  .review-cards p {
+    font-size: 10px;
+    min-height: 40px;
+  }
+}
+
+/* Acessibilidade: movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .testimonials .dots button {
+    transition: none;
+  }
+}

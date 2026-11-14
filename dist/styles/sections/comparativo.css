@@ -1,0 +1,183 @@
+/* SEÇÃO: comparativo */
+
+/* Regras comuns / computador */
+
+.duo {
+  display: grid;
+  max-width: 1440px;
+  padding-right: 0;
+  padding-left: 0;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  padding-top: 10px;
+  padding-bottom: 28px;
+  gap: 22px;
+}
+
+.duo>section {
+  scroll-margin-top: 90px;
+  padding-right: 7%;
+  padding-left: 7%;
+  border-radius: 38px;
+  min-width: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
+.comparison {
+  background: radial-gradient(ellipse at 90% 10%,#faf7f0,#f2eee3);
+}
+
+.duo h2 {
+  letter-spacing: -1px;
+  font-size: clamp(25px,2.65vw,34px);
+  white-space: nowrap;
+}
+
+.duo section>p {
+  margin-top: 7px;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.table-wrap {
+  overflow: auto;
+  border: 1px solid #e5dacc;
+  margin-right: 0;
+  margin-bottom: 8px;
+  margin-left: 0;
+  background: #fff;
+  margin-top: 15px;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px #60491b10;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+}
+
+th {
+  line-height: 1.1;
+  font-size: 12px;
+  padding-top: 9px;
+  padding-right: 9px;
+  padding-bottom: 9px;
+  padding-left: 9px;
+}
+
+td {
+  border-top: 1px solid #e6e1d6;
+  padding-top: 6px;
+  padding-right: 8px;
+  padding-bottom: 6px;
+  padding-left: 8px;
+}
+
+td:first-child {
+  text-align: left;
+  padding-left: 15px;
+}
+
+td:nth-child(2) {
+  background: #edfacb;
+  font-weight: 600;
+}
+
+th:nth-child(2) {
+  background: #d4f275;
+  font-size: 20px;
+}
+
+th span {
+  color: #f1b600;
+}
+
+.duo small {
+  font-size: 9px;
+}
+
+/* CELULAR — até 780px */
+@media (max-width: 780px) {
+  .duo {
+    grid-template-columns: 1fr;
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 24px;
+    padding-left: 12px;
+    gap: 20px;
+  }
+  .duo>section {
+    border-radius: 29px;
+    padding-top: 24px;
+    padding-right: 19px;
+    padding-bottom: 24px;
+    padding-left: 19px;
+  }
+  .duo h2 {
+    font-size: 25px;
+    white-space: normal;
+  }
+  .duo section>p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  table {
+    font-size: 10px;
+  }
+  th {
+    font-size: 10px;
+  }
+  td {
+    padding-top: 7px;
+    padding-right: 5px;
+    padding-bottom: 7px;
+    padding-left: 5px;
+  }
+}
+
+/* TABLET — 781px a 1100px */
+@media (min-width: 781px) and (max-width: 1100px) {
+  .duo {
+    gap: 16px;
+  }
+  .duo>section {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+  .duo h2 {
+    font-size: 24px;
+  }
+  .duo section>p {
+    font-size: 11px;
+  }
+  table {
+    font-size: 10px;
+  }
+  th {
+    font-size: 10px;
+  }
+  td {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+  }
+}
+
+/* TELAS GRANDES — 1450px a 1499px */
+@media (min-width: 1450px) and (max-width: 1499px) {
+  .duo>section {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+/* TELAS GRANDES — a partir de 1500px */
+@media (min-width: 1500px) {
+  .duo>section {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}

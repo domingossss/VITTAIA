@@ -1,0 +1,16 @@
+/* Entrada dos estilos. Edite cada seção no arquivo correspondente. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+@import url('./theme.css');
+@import url('./base.css');
+@import url('./components/shared.css');
+@import url('./components/modal.css');
+@import url('./sections/cabecalho.css');
+@import url('./sections/inicio.css');
+@import url('./sections/uvaia.css');
+@import url('./sections/produto.css');
+@import url('./sections/clube.css');
+@import url('./sections/comparativo.css');
+@import url('./sections/onde-encontrar.css');
+@import url('./sections/depoimentos.css');
+@import url('./sections/comprar.css');
+@import url('./sections/rodape.css');

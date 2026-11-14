@@ -1,25 +1,49 @@
 # VITTAIA
 
-Landing page responsiva baseada no esboço e nas imagens fornecidas. HTML, CSS e JavaScript sem dependências de instalação.
+Landing page em HTML, CSS e JavaScript, sem dependências de instalação.
 
-## Visualizar
+**Para fazer alterações, comece pelo [GUIA-DE-EDICAO.md](GUIA-DE-EDICAO.md).**
 
-Na pasta do projeto, execute `node preview.mjs` e abra http://127.0.0.1:5173.
-Também é possível abrir `dist/index.html` diretamente no navegador.
+## Arquivos que você deve editar
 
-## Conteúdo
+```text
+index.html                 Textos, imagens e estrutura das seções
+styles/
+  theme.css                Cores da marca
+  sections/                Um arquivo de estilo por seção
+  components/              Botões, componentes compartilhados e modal
+js/
+  config.js                Preço, frete, limites e velocidade das animações
+  data/depoimentos.js      Textos dos depoimentos
+  modules/                 Uma interação por arquivo
+assets/
+  images/                  Fotos e logos, incluindo seus arquivos alterados
+  shapes/                  Curvas e máscaras em SVG editável
+tools/                     Prévia, verificação e preparação para publicar
+tests/                     Testes dos comportamentos principais
+dist/                      Cópia gerada para publicação: não editar manualmente
+```
 
-- `dist/index.html`: estrutura e textos.
-- `dist/style.css`: identidade visual e adaptação para celular.
-- `dist/app.js`: menu, clube, depoimentos e compra demonstrativa.
-- `dist/assets`: imagens fornecidas e recortes do esboço.
+## Ver suas alterações
 
-O frete é uma simulação local, sem consulta a transportadoras. Clube, depoimentos e compra são ilustrativos para TCC. Nenhum dado pessoal é armazenado ou enviado. As fontes Google são opcionais e têm fontes de sistema como alternativa.
+Abra um terminal nesta pasta e execute:
 
-## Depoimentos e movimento
+```text
+npm run dev
+```
 
-Os depoimentos podem ser arrastados com o mouse ou deslizados por toque. Os indicadores acompanham a rolagem e também permitem navegar. Com a área em foco, as setas, Home e End oferecem navegação por teclado.
+Abra [http://127.0.0.1:5173](http://127.0.0.1:5173). Depois de salvar um arquivo, atualize o navegador. Você também pode usar uma extensão de servidor local no editor. Os módulos JavaScript precisam de HTTP: use a prévia em vez de abrir o HTML por duplo clique.
 
-Os elementos aparecem suavemente, em sequência, quando entram na tela. A entrada acontece uma única vez e respeita a preferência de movimento reduzido do aparelho. O conteúdo continua acessível se as animações não estiverem disponíveis.
+## Conferir e preparar para publicação
 
-Os comportamentos estão em `dist/motion.js` e a apresentação em `dist/motion.css`.
+```text
+npm run check
+npm test
+npm run build
+```
+
+O último comando recria `dist/` a partir dos arquivos editáveis da raiz. A pasta `.openai/` vincula este projeto à publicação existente.
+
+## Sobre a demonstração
+
+Marca fictícia para TCC. Preço, frete, clube, compra e depoimentos são demonstrativos. Não há cobrança, armazenamento de dados pessoais ou consulta real a transportadoras. As fontes Google têm alternativas de sistema.
