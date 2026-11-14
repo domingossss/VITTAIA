@@ -3,8 +3,8 @@
 /* Regras comuns / computador */
 
 .about {
-  display: grid;
-  position: relative;
+  @apply grid relative min-h-0 items-center overflow-clip;
+
   grid-template-columns: 41% 59%;
   background: var(--cream);
   z-index: 1;
@@ -12,16 +12,14 @@
   padding-right: 0;
   padding-bottom: 55px;
   padding-left: 0;
-  min-height: 0;
-  align-items: center;
-  overflow: clip;
+
 }
 
 .fruit-photo {
-  background: url('../../assets/images/uvaia-layout.png') center/100% 100% no-repeat;
+  @apply self-center min-h-0;
+  background: url('../assets/images/uvaia-layout.png') center/100% 100% no-repeat;
   border: 0;
-  align-self: center;
-  min-height: 0;
+
   height: clamp(250px,25vw,340px);
   margin-right: 20px;
   background-size: 100% 100%;
@@ -38,8 +36,9 @@
 }
 
 .about h3 {
+  @apply font-medium;
   font-size: 19px;
-  font-weight: 500;
+
   margin-top: 8px;
   margin-right: 0;
   margin-bottom: 8px;
@@ -52,15 +51,8 @@
   line-height: 1.5;
 }
 
-.benefits {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 0;
-  margin-top: 23px;
-}
-
 .benefits article {
-  text-align: center;
+  @apply text-center;
   border-right: 1px solid #eeb54866;
   font-size: 13px;
   line-height: 1.2;
@@ -75,7 +67,7 @@
 }
 
 .benefits strong {
-  display: block;
+  @apply block;
   margin-top: 3px;
   margin-right: 0;
   margin-bottom: 3px;
@@ -98,8 +90,9 @@
 }
 
 .about h2 {
+  @apply whitespace-nowrap;
   font-size: clamp(29px,3.45vw,44px);
-  white-space: nowrap;
+
   line-height: 1.05;
 }
 
@@ -107,7 +100,6 @@
   width: 40px;
   height: 40px;
 }
-
 
 /* CELULAR — até 780px */
 @media (max-width: 780px) {
@@ -141,18 +133,16 @@
   .about-copy>p {
     font-size: 13px;
   }
-  .benefits {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 0;
-  }
+  
   .benefits article {
     font-size: 12px;
     padding-right: 19px;
     padding-left: 19px;
   }
   .about h2 {
+  @apply whitespace-normal;
     font-size: 31px;
-    white-space: normal;
+
   }
   .benefits .icon {
     width: 36px;

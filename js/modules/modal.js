@@ -4,6 +4,12 @@ export function createModal() {
 
   function show(html) {
     content.innerHTML = html;
+    dialog.querySelectorAll('.toast-region').forEach(region => region.remove());
+    const heading = content.querySelector('h2');
+    if (heading) {
+      heading.id = 'modal-title';
+      dialog.setAttribute('aria-labelledby', 'modal-title');
+    }
     if (!dialog.open) dialog.showModal();
   }
 

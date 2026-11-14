@@ -3,8 +3,9 @@
 /* Regras comuns / computador */
 
 .testimonials {
+  @apply relative;
   color: #fff;
-  position: relative;
+
   isolation: isolate;
   border-radius: 0;
   background: radial-gradient(ellipse at center,#24742a,#004320);
@@ -16,15 +17,15 @@
 }
 
 .reviews {
-  display: flex;
+  @apply flex items-center;
   padding-left: 60px;
   padding-right: 60px;
   gap: 38px;
-  align-items: center;
+
 }
 
 .review-title {
-  flex-shrink: 0;
+  @apply shrink-0;
   width: 23%;
 }
 
@@ -38,7 +39,7 @@
 }
 
 .swoosh {
-  display: block;
+  @apply block;
   width: 190px;
   border-top: 5px solid var(--yellow);
   border-radius: 50%;
@@ -48,25 +49,24 @@
 }
 
 .review-cards {
+  @apply flex flex-1 min-w-0 overflow-x-auto overflow-y-hidden cursor-grab;
   grid-template-columns: repeat(3,1fr);
-  display: flex;
-  flex: 1;
-  min-width: 0;
+
   gap: 18px;
-  overflow-x: auto;
-  overflow-y: hidden;
+
   padding-top: 12px;
   padding-right: 4px;
   padding-bottom: 16px;
   padding-left: 4px;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
-  cursor: grab;
+
   touch-action: auto;
   border-radius: 21px;
 }
 
 .review-cards article {
+  @apply min-w-0 box-border;
   border: 1px solid #c5e5af;
   background: #ffffff0a;
   border-radius: 20px;
@@ -77,8 +77,7 @@
   box-shadow: inset 0 0 0 3px #ffffff05;
   display: block!important;
   flex: 0 0 clamp(265px,26vw,340px);
-  min-width: 0;
-  box-sizing: border-box;
+
   min-height: 149px;
 }
 
@@ -99,12 +98,12 @@
 }
 
 .review-cards footer {
+  @apply flex justify-between;
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
   background: none;
-  display: flex;
-  justify-content: space-between;
+
   padding-top: 7px;
 }
 
@@ -115,8 +114,8 @@
 }
 
 .dots {
-  display: flex;
-  justify-content: center;
+  @apply flex justify-center;
+
   gap: 6px;
   margin-top: 15px;
 }
@@ -138,35 +137,36 @@
   background: #f2f7e9;
 }
 
-
 .testimonials:before {
+  @apply absolute pointer-events-none;
   content: '';
-  position: absolute;
+
   left: 0;
   right: 0;
   z-index: -1;
   background-size: 100% 100%;
-  pointer-events: none;
+
   top: -1px;
   height: 49px;
-  background-image: url('../../assets/shapes/depoimentos-01.svg');
+  background-image: url('../assets/shapes/depoimentos-01.svg');
 }
 
 .testimonials:after {
+  @apply absolute pointer-events-none;
   content: '';
-  position: absolute;
+
   left: 0;
   right: 0;
   z-index: -1;
   background-size: 100% 100%;
-  pointer-events: none;
+
   bottom: -1px;
-  background-image: url('../../assets/shapes/depoimentos-02.svg');
+  background-image: url('../assets/shapes/depoimentos-02.svg');
   height: 49px;
 }
 
 .review-cards::-webkit-scrollbar {
-  display: none;
+  @apply hidden;
 }
 
 .review-cards article p {
@@ -175,8 +175,8 @@
 }
 
 .review-cards.is-dragging {
-  cursor: grabbing;
-  user-select: none;
+  @apply cursor-grabbing select-none;
+
   scroll-behavior: auto;
 }
 
@@ -186,7 +186,7 @@
 }
 
 .review-hint {
-  display: block;
+  @apply block;
   font-size: 11px;
   color: #e0ebcd;
   margin-top: 15px;
@@ -198,22 +198,22 @@
 }
 
 .testimonials .dots button {
-  position: relative;
+  @apply relative;
   width: 12px;
   height: 12px;
   transition: width .25s,background .25s;
 }
 
 .testimonials .dots button:before {
+  @apply absolute;
   content: '';
-  position: absolute;
+
   inset: -8px;
 }
 
 .testimonials .dots button.active {
   width: 30px;
 }
-
 
 /* CELULAR — até 780px */
 @media (max-width: 780px) {
@@ -222,7 +222,7 @@
     padding-bottom: 51px;
   }
   .reviews {
-    display: block;
+  @apply block;
     padding-left: 22px;
     padding-right: 22px;
   }
@@ -256,13 +256,14 @@
     font-size: 19px;
   }
   .review-cards p {
+  @apply min-h-0;
     font-size: 13px;
-    min-height: 0;
+
     line-height: 1.4;
     margin-bottom: 8px;
   }
   .review-cards article:not(:first-child) {
-    display: block;
+  @apply block;
   }
   .testimonials:before {
     height: 36px;
@@ -313,7 +314,7 @@
 
 /* Acessibilidade: movimento reduzido */
 @media (prefers-reduced-motion: reduce) {
-  .testimonials .dots button {
+  html:not([data-motion="full"]) .testimonials .dots button {
     transition: none;
   }
 }

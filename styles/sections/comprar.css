@@ -3,7 +3,7 @@
 /* Regras comuns / computador */
 
 .buy {
-  position: relative;
+  @apply relative;
   padding-right: 0;
   padding-left: 0;
   background: var(--cream);
@@ -12,11 +12,11 @@
 }
 
 .buy-grid {
-  display: grid;
-  align-items: center;
+  @apply grid items-center relative;
+
   max-width: 1320px;
   grid-template-columns: minmax(0,27fr) minmax(0,73fr);
-  position: relative;
+
   z-index: 1;
   gap: 27px;
 }
@@ -33,11 +33,11 @@
 }
 
 .order {
-  display: grid;
+  @apply grid items-center;
   background: #fff;
   border: 1px solid #f2eade;
   box-shadow: 0 5px 18px #5e44151c;
-  align-items: center;
+
   grid-template-columns: minmax(0,28fr) minmax(0,35fr) minmax(0,37fr);
   padding-top: 15px;
   padding-right: 18px;
@@ -47,9 +47,9 @@
 }
 
 .order-image {
-  width: 100%;
+  @apply w-full object-contain;
   height: 165px;
-  object-fit: contain;
+
 }
 
 .order-info {
@@ -74,8 +74,8 @@
 }
 
 .quantity {
-  display: flex;
-  align-items: center;
+  @apply flex items-center;
+
   gap: 5px;
   font-size: 10px;
   margin-bottom: 5px;
@@ -94,9 +94,10 @@
 }
 
 .quantity input {
+  @apply text-center;
   width: 25px;
   border: 0;
-  text-align: center;
+
   appearance: textfield;
   -moz-appearance: textfield;
 }
@@ -106,8 +107,9 @@
 }
 
 .price {
+  @apply block;
   letter-spacing: -1px;
-  display: block;
+
   line-height: 1.2;
   font-size: 36px;
 }
@@ -122,19 +124,20 @@
 }
 
 #shipping label {
+  @apply block;
   font-size: 10px;
-  display: block;
+
   margin-bottom: 5px;
 }
 
 .cep-row {
-  display: flex;
+  @apply flex;
   gap: 5px;
 }
 
 .cep-row input {
-  min-width: 0;
-  width: 100%;
+  @apply min-w-0 w-full;
+
   border: 1px solid #c6cec5;
   border-radius: 25px;
   padding-top: 8px;
@@ -162,7 +165,7 @@
 }
 
 .order-actions>.button {
-  width: 100%;
+  @apply w-full;
   font-size: 14px;
   padding-top: 11px;
   padding-right: 11px;
@@ -171,19 +174,97 @@
 }
 
 .order-actions small {
+  @apply text-center;
   font-size: 9px;
-  text-align: center;
+
   margin-top: 8px;
 }
 
 .total {
+  @apply font-bold;
   font-size: 12px;
-  font-weight: 700;
+
   margin-bottom: 8px;
 }
 
 .mobile-buy {
+  @apply hidden;
+}
+
+/* O endereço ocupa a largura do cartão e expande a compra para baixo. */
+.address-panel {
+  grid-column: 1 / -1;
+  border: 0;
+  border-top: 1px solid #e3eadb;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.address-panel[hidden] {
   display: none;
+}
+
+.address-panel h3 {
+  font-size: 18px;
+}
+
+.address-panel > p {
+  font-size: 12px;
+  color: #60705d;
+  margin: 6px 0 14px;
+}
+
+.address-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.address-street { grid-column: span 9; }
+.address-number { grid-column: span 3; }
+.address-complement { grid-column: 1 / -1; }
+.address-neighborhood { grid-column: span 5; }
+.address-city { grid-column: span 5; }
+.address-state { grid-column: span 2; }
+
+.address-grid label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.address-grid label span {
+  color: #60705d;
+  font-weight: 400;
+}
+
+.address-grid input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #c6cec5;
+  background: #fff;
+  color: var(--green);
+  border-radius: 10px;
+  padding: 11px 12px;
+  font: inherit;
+  font-size: 14px;
+}
+
+.address-grid input[readonly] {
+  background: #f5f8ee;
+}
+
+.address-grid input:focus-visible {
+  outline: 2px solid #58975a;
+  outline-offset: 2px;
+}
+
+.address-panel > small {
+  display: block;
+  color: #60705d;
+  font-size: 10px;
+  margin-top: 14px;
 }
 
 .buy-heading h2 {
@@ -191,20 +272,34 @@
   line-height: 1.02;
 }
 
-
 .buy:after {
-  height: 65px!important;
+  @apply absolute pointer-events-none;
+  height: 110px;
   content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 125px;
-  background: url('../../assets/images/footer-leaves.png') left bottom/contain no-repeat;
-  pointer-events: none;
+
+  left: -23px;
+  bottom: -10px;
+  width: 180px;
+  z-index: 0;
+  background: url('../assets/shapes/folhas.svg') center/contain no-repeat;
+
 }
 
 /* CELULAR — até 780px */
 @media (max-width: 780px) {
+  .address-grid {
+    gap: 12px;
+  }
+  .address-street, .address-neighborhood {
+    grid-column: 1 / -1;
+  }
+  .address-number { grid-column: span 4; }
+  .address-complement { grid-column: span 8; }
+  .address-city { grid-column: span 9; }
+  .address-state { grid-column: span 3; }
+  .address-grid input {
+    font-size: 16px;
+  }
   .buy {
     padding-top: 26px;
     padding-bottom: 35px;
@@ -275,19 +370,19 @@
     font-size: 10px;
   }
   .mobile-buy {
-    display: flex;
+  @apply flex justify-between fixed;
     z-index: 15;
     bottom: 10px;
     left: 12px;
     right: 12px;
     box-shadow: 0 3px 20px #143d1e38;
     font-size: 11px;
-    justify-content: space-between;
+
     padding-top: 15px;
     padding-right: 20px;
     padding-bottom: 15px;
     padding-left: 20px;
-    position: fixed;
+
   }
   .buy-heading h2 {
     font-size: 34px;
@@ -296,8 +391,11 @@
     font-size: 13px;
   }
   .buy:after {
-    width: 85px;
-    opacity: .65;
+    width: 130px;
+    height: 80px;
+    left: -16px;
+    bottom: -7px;
+    opacity: .75;
   }
 }
 

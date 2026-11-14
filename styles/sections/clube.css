@@ -3,7 +3,7 @@
 /* Regras comuns / computador */
 
 .club {
-  text-align: center;
+  @apply text-center;
   padding-right: 70px;
   padding-left: 70px;
   max-width: 1240px;
@@ -17,26 +17,6 @@
   margin-left: 0;
   margin-top: 12px;
   margin-bottom: 24px;
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 34px;
-}
-
-.steps article {
-  border: 1px solid #dbd2c5;
-  overflow: hidden;
-  border-radius: 17px;
-  background: #fffaf3;
-}
-
-.steps img {
-  width: 100%;
-  display: block;
-  height: 149px;
-  object-fit: cover;
 }
 
 .steps article>div {
@@ -89,18 +69,7 @@
     line-height: 1.4;
     margin-bottom: 22px;
   }
-  .steps {
-    grid-template-columns: 1fr;
-    gap: 17px;
-  }
-  .steps article {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 42% 58%;
-  }
-  .steps img {
-    height: 140px;
-  }
+
   .steps article>div {
     padding-right: 9px;
     padding-bottom: 13px;
@@ -130,9 +99,7 @@
   .club>p {
     font-size: 14px;
   }
-  .steps img {
-    height: 112px;
-  }
+  
   .steps article>div {
     padding-right: 7px;
     padding-left: 7px;

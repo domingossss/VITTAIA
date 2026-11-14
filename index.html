@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#153e1e">
     <title>VITTAIA — Diferente até no sabor.</title>
-    <meta name="description" content="Conheça a VITTAIA: a personalidade da Uvaia em um refrigerante orgânico. Projeto demonstrativo para TCC.">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="icon" type="image/png" href="assets/images/logo.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="assets/images/logo_branca.png" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="Conheça a VITTAIA: a personalidade da Uvaia em um refrigerante orgânico. Projeto demonstrativo para fins acadêmicos.">
+    <link rel="stylesheet" href="styles/site.css">
   </head>
-  <body>
+  <body class="font-sans text-forest bg-white">
     <a class="skip" href="#inicio">Ir para o conteúdo</a>
     <!-- CABEÇALHO: logo e navegação -->
     <header>
@@ -34,14 +37,14 @@
         </div>
         <div class="hero-photo" role="img" aria-label="Pessoa segurando uma lata gelada de VITTAIA">
         </div>
-        <div class="container hero-content">
+        <div class="site-container hero-content">
           <p class="eyebrow">Experimente o natural <span></span></p>
           <h1>Diferente até<br><em>no sabor.</em></h1>
           <h2>O refrigerante orgânico de Uvaia.</h2>
           <p>Sabor natural da Mata Atlântica,<br>com leveza e personalidade.</p>
           <div class="actions">
             <a class="button" href="#comprar">Quero experimentar</a>
-            <a class="button outline" href="#uvaia">Conheça a VITTAIA</a>
+            <a class="button button-outline" href="#uvaia">Conheça a VITTAIA</a>
           </div>
         </div>
         <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
@@ -56,7 +59,7 @@
           <h2>Você conhece a <em>Uvaia?</em></h2>
           <h3>Uma fruta brasileira que merece ser descoberta.</h3>
           <p>Nativa da Mata Atlântica, a Uvaia tem aroma marcante, acidez agradável e um sabor cheio de personalidade.</p>
-          <div class="benefits">
+          <div class="benefits grid grid-cols-2 gap-x-0 gap-y-5 mt-[23px] desktop:grid-cols-4 desktop:gap-y-0">
             <article>
               <i data-icon="shield">
               </i>
@@ -87,7 +90,7 @@
       </section>
       <!-- 03 — PRODUTO: imagem do pack e diferenciais -->
       <section id="produto" class="product">
-        <div class="container product-grid">
+        <div class="site-container product-grid">
           <div class="pack-visual">
             <img src="assets/images/pack-layout.png" alt="Caixa VITTAIA ao lado de uma lata e frutas Uvaia" loading="lazy">
           </div>
@@ -125,26 +128,26 @@
         </div>
       </section>
       <!-- 04 — CLUBE: passos da assinatura -->
-      <section id="clube" class="club container">
+      <section id="clube" class="club site-container">
         <h2>Como funciona o Clube VITTAIA</h2>
         <p>Uma forma prática de receber seu pack favorito com recorrência e comodidade.</p>
-        <div class="steps">
-          <article>
-            <img src="assets/images/clube-pack.png" alt="Pack VITTAIA sobre a mesa" loading="lazy">
+        <div class="steps grid grid-cols-1 gap-[17px] desktop:grid-cols-3 desktop:gap-[34px]">
+          <article class="grid grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
+            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/clube-pack.png" alt="Pack VITTAIA sobre a mesa" loading="lazy">
             <div>
               <h3>1. Escolha seu pack</h3>
               <p>Selecione a quantidade ideal<br>para sua rotina e informe sua região.</p>
             </div>
           </article>
-          <article>
-            <img src="assets/images/clube-entrega.png" alt="Entrega de uma caixa em casa" loading="lazy">
+          <article class="grid grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
+            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/clube-entrega.png" alt="Entrega de uma caixa em casa" loading="lazy">
             <div>
               <h3>2. Receba em casa</h3>
               <p>Uma proposta de entrega recorrente,<br>de forma prática e sem complicação.</p>
             </div>
           </article>
-          <article>
-            <img src="assets/images/clube-drink.png" alt="Lata VITTAIA ao lado de um copo com gelo" loading="lazy">
+          <article class="grid grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
+            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/clube-drink.png" alt="Lata VITTAIA ao lado de um copo com gelo" loading="lazy">
             <div>
               <h3>3. Aproveite</h3>
               <p>Tenha VITTAIA sempre por perto<br>e não fique sem seu sabor favorito.</p>
@@ -154,7 +157,7 @@
         <button class="button green" id="join">Quero fazer parte</button>
         <small>Clube apresentado em caráter demonstrativo.</small>
       </section>
-      <div class="duo container">
+      <div class="duo site-container">
         <!-- 05 — COMPARATIVO: tabela -->
         <section id="comparativo" class="comparison">
           <h2>Compare e entenda a diferença</h2>
@@ -164,7 +167,7 @@
               <thead>
                 <tr>
                   <th>Característica</th>
-                  <th>VITTAIA<span>↗</span></th>
+                  <th><img class="logo" src="assets/images/logo.png" alt="VITTAIA"></th>
                   <th>Refrigerante<br>tradicional*</th>
                 </tr>
               </thead>
@@ -197,13 +200,13 @@
               </tbody>
             </table>
           </div>
-          <small>* Comparativo ilustrativo para fins acadêmicos do TCC.</small>
+          <small>* Comparativo ilustrativo para fins acadêmicos.</small>
         </section>
         <!-- 06 — ONDE ENCONTRAR: canais de venda -->
         <section id="encontrar" class="find">
           <h2>Onde encontrar a <em>VITTAIA?</em></h2>
           <p>Uma proposta para estabelecimentos que valorizam produtos naturais e novos sabores.</p>
-          <div class="stores">
+          <div class="stores grid grid-cols-4 mt-3 gap-2 desktop:gap-[11px] tablet:gap-[9px]">
             <div>
               <i data-icon="store">
               </i>
@@ -225,7 +228,7 @@
               <strong>Cafés e espaços<br>saudáveis</strong>
             </div>
           </div>
-          <div class="find-bottom">
+          <div class="find-bottom flex items-center justify-between mt-2.5 gap-3 desktop:gap-[22px]">
             <img class="map-art" src="assets/images/map-layout.png" alt="Mapa ilustrativo com pontos de localização" loading="lazy">
             <div>
               <h3>Quer encontrar<br>perto de você?</h3>
@@ -236,7 +239,7 @@
       </div>
       <!-- 07 — DEPOIMENTOS: os textos ficam em js/data/depoimentos.js -->
       <section id="depoimentos" class="testimonials">
-        <div class="container reviews">
+        <div class="site-container reviews">
           <div class="review-title">
             <h2>Depoimentos</h2>
             <span class="swoosh"></span>
@@ -253,7 +256,7 @@
       </section>
       <!-- 08 — COMPRAR: preço configurado em js/config.js -->
       <section id="comprar" class="buy">
-        <div class="container buy-grid">
+        <div class="site-container buy-grid">
           <div class="buy-heading">
             <p class="eyebrow">Sua próxima descoberta</p>
             <h2>Leve a VITTAIA<br><em>para casa.</em></h2>
@@ -271,29 +274,60 @@
                 <button type="button" id="plus" aria-label="Aumentar quantidade">+</button>
               </div>
               <strong class="price" id="price">R$ 48,00</strong>
-              <small>+ frete calculado pelo CEP</small>
+              <small>+ frete fixo de R$ 10,50</small>
             </div>
             <div class="order-actions">
               <form id="shipping">
-                <label for="cep">Calcule o frete (simulação)</label>
+                <label for="cep">Consulte seu CEP · frete fixo de R$ 10,50</label>
                 <div class="cep-row">
                   <input id="cep" placeholder="Digite seu CEP" inputmode="numeric" autocomplete="postal-code" maxlength="9" required aria-describedby="shipping-result">
                   <button class="button green small" type="submit">Calcular</button>
                 </div>
               </form>
-              <p id="shipping-result" role="status">Informe seu CEP para simular a entrega.</p>
+              <p id="shipping-result" role="status">Digite seu CEP para preencher o endereço.</p>
               <p class="total" id="total"></p>
               <button class="button" id="checkout">Comprar agora</button>
               <small>♙ Compra demonstrativa · Sem cobrança real</small>
             </div>
+            <form class="address-panel" id="delivery-address" aria-labelledby="address-title" hidden>
+              <h3 id="address-title">Seu endereço de entrega</h3>
+              <p id="address-hint">Confira o endereço e complete o número e o complemento, se houver.</p>
+              <div class="address-grid">
+                <div class="address-street">
+                  <label for="street">Logradouro</label>
+                  <input id="street" name="street" autocomplete="address-line1" maxlength="180" required>
+                </div>
+                <div class="address-number">
+                  <label for="address-number">Número</label>
+                  <input id="address-number" name="number" placeholder="Nº ou S/N" autocomplete="off" maxlength="20" required>
+                </div>
+                <div class="address-complement">
+                  <label for="address-complement">Complemento <span>(opcional)</span></label>
+                  <input id="address-complement" name="complement" placeholder="Apartamento, bloco, referência…" autocomplete="address-line2" maxlength="120">
+                </div>
+                <div class="address-neighborhood">
+                  <label for="neighborhood">Bairro</label>
+                  <input id="neighborhood" name="neighborhood" autocomplete="address-level3" maxlength="100" required>
+                </div>
+                <div class="address-city">
+                  <label for="city">Cidade</label>
+                  <input id="city" name="city" autocomplete="address-level2" readonly>
+                </div>
+                <div class="address-state">
+                  <label for="state">UF</label>
+                  <input id="state" name="state" autocomplete="address-level1" readonly>
+                </div>
+              </div>
+              <small>Endereço consultado pelo CEP. Dados usados apenas nesta simulação.</small>
+            </form>
           </div>
         </div>
       </section>
     </main>
     <!-- RODAPÉ: navegação, marca e informações legais -->
     <footer>
-      <div class="container footer-grid">
-        <a class="wordmark" href="#inicio">VITTAIA<span>↗</span></a>
+      <div class="site-container footer-grid">
+        <a class="inline-flex items-center" href="#inicio" aria-label="VITTAIA — início"><img class="logo_branca block h-auto w-[145px] max-w-full desktop:w-[158px]" src="assets/images/logo_branca.png" alt="VITTAIA"></a>
         <p class="tagline">Diferente até no sabor.</p>
         <div>
           <a href="#inicio">Início</a>
@@ -319,7 +353,7 @@
       <div id="modal-content">
       </div>
     </dialog>
-    <script type="module" src="js/main.js">
+    <script defer src="js/site.js">
     </script>
   </body>
 </html>

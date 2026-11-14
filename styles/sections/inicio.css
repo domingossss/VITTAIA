@@ -3,47 +3,50 @@
 /* Regras comuns / computador */
 
 .hero {
-  position: relative;
+  @apply relative overflow-hidden min-h-0;
   isolation: isolate;
-  overflow: hidden;
+
   color: #fff;
-  min-height: 0;
+
   background: #203d0b;
   height: clamp(380px,32vw,475px);
 }
 
 .hero-photo {
-  position: absolute;
+  @apply absolute;
   z-index: -2;
   inset: 0;
-  background: url('../../assets/images/hero.png') right center/auto 100% no-repeat;
+  background: url('../assets/images/hero.png') right center/auto 100% no-repeat;
   mask-image: linear-gradient(90deg,transparent,#000 9%);
   left: 50%;
-  background-image: url('../../assets/images/hero-layout.png');
+  background-image: url('../assets/images/hero-layout.png');
   background-size: cover;
   background-position: left center;
 }
 
 .hero:after {
+  @apply absolute;
   content: '';
-  position: absolute;
+
   inset: 0;
   z-index: -1;
   background: linear-gradient(90deg,#162d0780 0%,#162d0760 39%,#162d0750 49%,transparent 58%);
 }
 
 .hero-content {
+  @apply relative;
   padding-top: 28px!important;
   max-width: 1240px;
   padding-right: 0;
   padding-bottom: 48px;
   padding-left: 9.7%;
-  position: relative;
+
 }
 
 .hero h2 {
+  @apply font-semibold;
   font-size: clamp(20px,2.2vw,28px);
-  font-weight: 600;
+
   letter-spacing: -.5px;
 }
 
@@ -54,15 +57,15 @@
 }
 
 .actions {
-  display: flex;
+  @apply flex;
   margin-top: 15px;
   gap: 20px;
 }
 
 .wave {
-  position: absolute;
+  @apply absolute w-full;
   left: 0;
-  width: 100%;
+
   height: 26px;
   bottom: -1px;
   z-index: 3;
@@ -81,18 +84,18 @@
   padding-left: 29px;
 }
 
-
 .hero .hero-photo {
   mask-image: linear-gradient(90deg,transparent,#000 22%);
 }
 
 .hero-forest {
+  @apply absolute;
   background-size: cover!important;
   right: 36%!important;
-  position: absolute;
+
   inset: 0 43% 0 0;
   z-index: -2;
-  background: url('../../assets/images/forest-layout.png') center/100% 100%;
+  background: url('../assets/images/forest-layout.png') center/100% 100%;
   filter: blur(2px);
 }
 
@@ -101,8 +104,9 @@
 }
 
 .hero:before {
+  @apply absolute;
   content: '';
-  position: absolute;
+
   bottom: 0;
   right: 0;
   width: 49%;
@@ -117,7 +121,7 @@
   letter-spacing: 0;
 }
 
-.actions .outline {
+.actions .button-outline {
   padding-top: 10px;
   padding-right: 28px;
   padding-bottom: 10px;
@@ -135,7 +139,7 @@
 /* CELULAR — até 780px */
 @media (max-width: 780px) {
   .hero {
-    height: auto;
+  @apply h-auto;
     min-height: 710px;
   }
   .hero-photo {
@@ -193,7 +197,7 @@
   .hero .eyebrow {
     font-size: 11px;
   }
-  .actions .outline {
+  .actions .button-outline {
     padding-right: 16px;
     padding-left: 16px;
   }

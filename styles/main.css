@@ -1,16 +1,36 @@
-/* Entrada dos estilos. Edite cada seção no arquivo correspondente. */
+/* Entrada do Tailwind. URLs de imagens são relativas ao CSS gerado styles/site.css. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
-@import url('./theme.css');
-@import url('./base.css');
-@import url('./components/shared.css');
-@import url('./components/modal.css');
-@import url('./sections/cabecalho.css');
-@import url('./sections/inicio.css');
-@import url('./sections/uvaia.css');
-@import url('./sections/produto.css');
-@import url('./sections/clube.css');
-@import url('./sections/comparativo.css');
-@import url('./sections/onde-encontrar.css');
-@import url('./sections/depoimentos.css');
-@import url('./sections/comprar.css');
-@import url('./sections/rodape.css');
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+@import './theme.css' layer(components);
+@import './base.css' layer(components);
+@import './components/shared.css' layer(components);
+@import './components/modal.css' layer(components);
+@import './sections/cabecalho.css' layer(components);
+@import './sections/inicio.css' layer(components);
+@import './sections/uvaia.css' layer(components);
+@import './sections/produto.css' layer(components);
+@import './sections/clube.css' layer(components);
+@import './sections/comparativo.css' layer(components);
+@import './sections/onde-encontrar.css' layer(components);
+@import './sections/depoimentos.css' layer(components);
+@import './sections/comprar.css' layer(components);
+@import './sections/rodape.css' layer(components);
+@import './components/experience.css' layer(components);
+@import './components/feedback.css' layer(components);
+
+@source '../index.html';
+@source '../js';
+
+@theme inline {
+  --color-forest: var(--green);
+  --color-uvaia: var(--yellow);
+  --color-fruit: var(--orange);
+  --color-cream: var(--cream);
+  --font-sans: Inter, Arial, sans-serif;
+}
+
+/* Mantém os pontos de adaptação do layout já existente. */
+@custom-variant desktop (@media (min-width: 781px));
+@custom-variant tablet (@media (min-width: 781px) and (max-width: 1100px));

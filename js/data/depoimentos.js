@@ -4,16 +4,16 @@ export const testimonials = [
   {
     title: 'Leve e diferente',
     text: 'Um sabor bem diferente do comum, refrescante e muito agradável.',
-    author: 'Mariana S.',
+    author: 'Marcos S.',
   },
   {
     title: 'Gostinho da natureza',
     text: 'Achei a proposta incrível e o pack é perfeito para ter em casa.',
-    author: 'Carlos R.',
+    author: 'Thais M.',
   },
   {
     title: 'Minha nova descoberta',
     text: 'Bonito, saboroso e com uma identidade que chama atenção.',
-    author: 'Juliana M.',
+    author: 'Patricia C.',
   },
 ];

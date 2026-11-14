@@ -1,7 +1,9 @@
 import { testimonials } from '../data/depoimentos.js';
+import { motionPreference } from './motion.js';
 
 function createCard(review, index, total) {
   const card = document.createElement('article');
+  card.className = 'min-w-0 box-border';
   card.setAttribute('aria-label', `Depoimento ${index + 1} de ${total}`);
   const title = document.createElement('h3');
   title.textContent = review.title;
@@ -11,7 +13,7 @@ function createCard(review, index, total) {
   const author = document.createElement('b');
   author.textContent = review.author;
   const stars = document.createElement('span');
-  stars.className = 'stars';
+  stars.className = 'stars text-uvaia';
   stars.setAttribute('aria-label', '5 estrelas');
   stars.textContent = '★★★★★';
   footer.append(author, stars);
@@ -22,7 +24,7 @@ function createCard(review, index, total) {
 export function initTestimonials() {
   const track = document.querySelector('#review-cards');
   const indicatorGroup = document.querySelector('.testimonials .dots');
-  const preference = matchMedia('(prefers-reduced-motion: reduce)');
+  const preference = motionPreference;
 
   track.replaceChildren(...testimonials.map((review, index) => {
     return createCard(review, index, testimonials.length);

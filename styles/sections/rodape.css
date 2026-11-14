@@ -12,17 +12,18 @@ footer {
 }
 
 .footer-grid {
-  display: grid;
+  @apply grid items-center;
   grid-template-columns: 1.1fr 1.3fr .7fr .8fr 1.4fr;
-  align-items: center;
+
   padding-left: 55px;
   padding-right: 55px;
   gap: 24px;
 }
 
 .wordmark {
+  @apply font-medium;
   letter-spacing: -3px;
-  font-weight: 500;
+
   font-size: 40px;
 }
 
@@ -39,8 +40,8 @@ footer {
 }
 
 .footer-grid div {
-  display: flex;
-  flex-direction: column;
+  @apply flex flex-col;
+
   gap: 7px;
   font-size: 11px;
 }
@@ -50,8 +51,9 @@ footer {
 }
 
 .legal {
+  @apply text-center;
   opacity: .75;
-  text-align: center;
+
   margin-right: 25px;
   margin-bottom: 0;
   margin-left: 25px;
@@ -59,7 +61,6 @@ footer {
   font-size: 9px;
   margin-top: 16px;
 }
-
 
 /* CELULAR — até 780px */
 @media (max-width: 780px) {

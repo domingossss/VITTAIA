@@ -1,5 +1,6 @@
 import { product } from '../config.js';
 import { money } from '../utils/format.js';
+import { notify } from './feedback.js';
 
 export function initClub(modal) {
   document.querySelector('#join').addEventListener('click', () => {
@@ -33,6 +34,7 @@ export function initClub(modal) {
         <p>Valor por entrega: <strong>${money(quantity * product.price)}</strong> + frete.</p>
         <small>Simulação concluída. Nenhuma assinatura foi criada.</small>
       `);
+      notify('Sua simulação do Clube VITTAIA foi concluída.', 'success');
     });
   });
 }

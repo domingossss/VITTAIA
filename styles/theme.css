@@ -7,4 +7,8 @@
   --green: #0c3f1c;
   --yellow: #ffcc00;
   --orange: #ed8300;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --surface: #fffdf8;
+  --line: #16452618;
+  --shadow-soft: 0 2px 4px #123d1d04, 0 12px 28px #123d1d08, 0 28px 60px #123d1d06;
 }

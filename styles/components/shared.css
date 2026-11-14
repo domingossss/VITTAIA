@@ -3,9 +3,8 @@
 /* Regras comuns / computador */
 
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @apply inline-flex items-center justify-center font-bold;
+
   gap: 8px;
   background: linear-gradient(#ffd91a,#ffbc00);
   border: 1px solid #f6bd02;
@@ -14,7 +13,7 @@
   padding-right: 27px;
   padding-bottom: 11px;
   padding-left: 27px;
-  font-weight: 700;
+
   font-size: 15px;
   color: #102c12;
   line-height: 1.2;
@@ -37,7 +36,7 @@ input:focus-visible {
   outline-offset: 4px;
 }
 
-.container {
+.site-container {
   margin-top: auto;
   margin-right: auto;
   margin-bottom: auto;
@@ -66,7 +65,7 @@ input:focus-visible {
   border-color: #3a8d24;
 }
 
-.outline {
+.button-outline {
   color: #fff;
   background: transparent;
   border: 2px solid #fff;
@@ -77,17 +76,15 @@ input:focus-visible {
 }
 
 .eyebrow {
-  text-transform: uppercase;
+  @apply uppercase font-bold flex items-center;
   letter-spacing: 1.4px;
   font-size: 12px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
+
   gap: 14px;
 }
 
 .eyebrow span {
-  display: inline-block;
+  @apply inline-block;
   width: 55px;
   height: 3px;
   border-radius: 100%;
@@ -105,8 +102,9 @@ input:focus-visible {
 }
 
 .text-link {
+  @apply font-bold;
   font-size: 13px;
-  font-weight: 700;
+
   border-bottom: 1px solid var(--green);
   padding-bottom: 4px;
 }
@@ -116,7 +114,7 @@ input:focus-visible {
 }
 
 .skip {
-  position: fixed;
+  @apply fixed;
   top: -100px;
   left: 10px;
   background: white;
@@ -133,7 +131,7 @@ input:focus-visible {
 
 /* CELULAR — até 780px */
 @media (max-width: 780px) {
-  .container {
+  .site-container {
     padding-left: 22px;
     padding-right: 22px;
   }

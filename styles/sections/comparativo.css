@@ -3,7 +3,7 @@
 /* Regras comuns / computador */
 
 .duo {
-  display: grid;
+  @apply grid;
   max-width: 1440px;
   padding-right: 0;
   padding-left: 0;
@@ -14,11 +14,12 @@
 }
 
 .duo>section {
+  @apply min-w-0;
   scroll-margin-top: 90px;
   padding-right: 7%;
   padding-left: 7%;
   border-radius: 38px;
-  min-width: 0;
+
   padding-top: 27px;
   padding-bottom: 27px;
 }
@@ -28,9 +29,10 @@
 }
 
 .duo h2 {
+  @apply whitespace-nowrap;
   letter-spacing: -1px;
   font-size: clamp(25px,2.65vw,34px);
-  white-space: nowrap;
+
 }
 
 .duo section>p {
@@ -52,9 +54,9 @@
 }
 
 table {
+  @apply w-full text-center;
   border-collapse: collapse;
-  width: 100%;
-  text-align: center;
+
   font-size: 11px;
 }
 
@@ -81,8 +83,9 @@ td:first-child {
 }
 
 td:nth-child(2) {
+  @apply font-semibold;
   background: #edfacb;
-  font-weight: 600;
+
 }
 
 th:nth-child(2) {
@@ -92,6 +95,20 @@ th:nth-child(2) {
 
 th span {
   color: #f1b600;
+}
+
+.comparison th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.comparison th .logo {
+  display: block;
+  width: 112px;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+  object-fit: contain;
 }
 
 .duo small {
@@ -116,8 +133,9 @@ th span {
     padding-left: 19px;
   }
   .duo h2 {
+  @apply whitespace-normal;
     font-size: 25px;
-    white-space: normal;
+
   }
   .duo section>p {
     font-size: 12px;

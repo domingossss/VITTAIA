@@ -7,9 +7,7 @@ export const product = {
 };
 
 export const shipping = {
-  regionalPrefixLimit: 3,
-  regionalPrice: 12.9,
-  otherRegionsPrice: 19.9,
+  price: 10.5,
   minDays: 3,
   maxDays: 7,
 };
