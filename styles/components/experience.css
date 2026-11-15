@@ -110,14 +110,14 @@ dialog .close:hover { background: #e4ecd8; transform: rotate(5deg); }
   html[data-motion="full"] .review-cards article:hover { border-color: #ffe38aad; background-color: #ffffff0a; }
 }
 @media (min-width: 1101px) {
-  .hero { height: clamp(600px, 47vw, 680px); }
+  .hero { height: clamp(480px, 38vw, 620px); }
   .hero .hero-content { padding-top: 64px!important; }
   .hero h1 { font-size: clamp(58px, 5.2vw, 76px); line-height: 1.01; margin-block: 18px; letter-spacing: -2.8px; }
   .hero h2 { font-size: 23px; }
   .hero p:not(.eyebrow) { line-height: 1.5; font-size: 18px; }
   .hero .actions { margin-top: 26px; }
   .hero .eyebrow { font-size: 12px; letter-spacing: 1.8px; }
-  .about { padding-top: 48px; padding-bottom: 72px; }
+  .about { padding-top: 22px; padding-bottom: 52px; }
   .about h2 { white-space: normal; }
   .about-copy>p { font-size: 15px; line-height: 1.7; }
   .about h3 { font-size: 18px; line-height: 1.5; margin-block: 14px; }
@@ -134,8 +134,8 @@ dialog .close:hover { background: #e4ecd8; transform: rotate(5deg); }
   .nav-wrap { padding-block: 13px; }
   .is-scrolled .nav-wrap { padding-block: 9px; }
   nav { background: #fffdf4f5; backdrop-filter: blur(20px); border-radius: 0 0 24px 24px; }
-  .hero .hero-content { padding-top: 40px!important; }
-  .hero .hero-photo { top: 420px; }
+  .hero .hero-content { padding-top: 32px!important; }
+  .hero .hero-photo { top: 0; }
   .hero .actions { margin-top: 24px; }
   .steps article>div { padding: 16px 12px; }
   .steps p { font-size: 12px; }

@@ -70,6 +70,11 @@
     margin-bottom: 22px;
   }
 
+  .steps article>img {
+    min-height: 118px;
+    aspect-ratio: 16 / 9;
+    object-position: center;
+  }
   .steps article>div {
     padding-right: 9px;
     padding-bottom: 13px;

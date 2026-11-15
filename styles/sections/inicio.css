@@ -8,20 +8,21 @@
 
   color: #fff;
 
-  background: #203d0b;
-  height: clamp(380px,32vw,475px);
+  background: #1c3008;
+  min-height: clamp(390px, 33.333vw, 512px);
+  height: min(33.333vw, 512px);
 }
 
 .hero-photo {
   @apply absolute;
   z-index: -2;
   inset: 0;
-  background: url('../assets/images/hero.png') right center/auto 100% no-repeat;
-  mask-image: linear-gradient(90deg,transparent,#000 9%);
-  left: 50%;
-  background-image: url('../assets/images/hero-layout.png');
+  background: url('../assets/images/hero.jfif') center center/cover no-repeat;
+  left: 0;
+  width: 100%;
   background-size: cover;
-  background-position: left center;
+  background-position: center center;
+  mask-image: none;
 }
 
 .hero:after {
@@ -30,28 +31,31 @@
 
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg,#162d0780 0%,#162d0760 39%,#162d0750 49%,transparent 58%);
+  background: linear-gradient(90deg, rgba(13, 31, 3, .58) 0%, rgba(13, 31, 3, .34) 35%, rgba(13, 31, 3, 0) 62%);
 }
 
 .hero-content {
-  @apply relative;
-  padding-top: 28px!important;
+  @apply relative flex flex-col justify-center;
+  height: 100%;
+  padding-top: 28px !important;
   max-width: 1240px;
-  padding-right: 0;
+  padding-right: 38px;
   padding-bottom: 48px;
-  padding-left: 9.7%;
+  padding-left: 38px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
 .hero h2 {
   @apply font-semibold;
-  font-size: clamp(20px,2.2vw,28px);
+  font-size: clamp(20px, 2.2vw, 28px);
 
   letter-spacing: -.5px;
 }
 
 .hero p:not(.eyebrow) {
-  font-size: clamp(16px,1.6vw,21px);
+  font-size: clamp(16px, 1.6vw, 21px);
   line-height: 1.22;
   margin-top: 8px;
 }
@@ -85,13 +89,13 @@
 }
 
 .hero .hero-photo {
-  mask-image: linear-gradient(90deg,transparent,#000 22%);
+  mask-image: linear-gradient(90deg, transparent, #000 22%);
 }
 
 .hero-forest {
   @apply absolute;
-  background-size: cover!important;
-  right: 36%!important;
+  background-size: cover !important;
+  right: 36% !important;
 
   inset: 0 43% 0 0;
   z-index: -2;
@@ -139,81 +143,124 @@
 /* CELULAR — até 780px */
 @media (max-width: 780px) {
   .hero {
-  @apply h-auto;
-    min-height: 710px;
+    @apply h-auto;
+    min-height: clamp(520px, 142vw, 640px);
+    height: clamp(520px, 142vw, 640px);
   }
+
   .hero-photo {
-    inset: 300px 0 0 0;
-    background-position: center;
+    inset: 0;
+    background-position: 62% center;
+    background-size: cover;
   }
+
   .hero:after {
-    background: linear-gradient(#1b340b60 0%,#1b340b60 40%,#1b340b00 65%);
+    background: linear-gradient(180deg, rgba(13, 31, 3, .42) 0%, rgba(13, 31, 3, .2) 48%, rgba(13, 31, 3, .08) 100%);
   }
+
   .hero-content {
+    z-index: 1;
+    height: auto;
+    margin: 0;
     padding-right: 22px;
     padding-left: 22px;
-    padding-bottom: 370px;
+    padding-bottom: clamp(180px, 42vw, 240px);
   }
+
   .hero h2 {
     font-size: 18px;
     max-width: 320px;
   }
+
   .hero p:not(.eyebrow) {
     font-size: 15px;
   }
+
   .actions {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 17px;
   }
+
   .wave {
     height: 24px;
   }
+
   .hero h1 {
-    font-size: 49px;
+    max-width: 360px;
+    font-size: clamp(42px, 11vw, 55px);
     line-height: .98;
     letter-spacing: -1.6px;
   }
+
+  .hero h1 em {
+    color: var(--yellow);
+  }
+
+  .hero h2 {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+
+  .hero-secondary {
+    display: none;
+  }
+
   .actions .button {
     font-size: 12px;
     padding-right: 17px;
     padding-left: 17px;
   }
+
   .hero .hero-forest {
-    right: 0!important;
+    right: 0 !important;
   }
+
   .hero .hero-photo {
-    top: 320px;
-    mask-image: linear-gradient(#0000,#000 13%);
-    background-position: left center;
+    top: 0;
+    mask-image: none;
+    background-position: 62% center;
   }
+
   .hero-forest {
     inset: 0;
   }
+
   .hero:before {
     width: 60%;
-    z-index: 0;
+    z-index: -1;
   }
+
   .hero .eyebrow {
     font-size: 11px;
   }
+
   .actions .button-outline {
     padding-right: 16px;
     padding-left: 16px;
   }
+
   .hero .wave {
-    height: 38px;
+    height: 28px;
+    bottom: -2px;
+    display: block;
+  }
+  .hero .wave path {
+    stroke: var(--cream);
+    stroke-width: 1px;
   }
 }
 
 /* TABLET — 781px a 1100px */
 @media (min-width: 781px) and (max-width: 1100px) {
   .hero {
-    height: 355px;
+    height: 340px;
   }
+
   .hero h2 {
     font-size: 22px;
   }
+
   .actions .button {
     font-size: 14px;
     padding-top: 10px;
@@ -221,6 +268,7 @@
     padding-bottom: 10px;
     padding-left: 24px;
   }
+
   .hero .eyebrow {
     font-size: 13px;
   }
@@ -229,19 +277,23 @@
 /* TELAS GRANDES — 1450px a 1499px */
 @media (min-width: 1450px) and (max-width: 1499px) {
   .hero-photo {
-    background-size: 100% 100%;
+    background-size: cover;
   }
+
   .hero-content {
-    padding-left: max(8%,calc((100vw - 1160px)/2));
+    padding-left: 38px;
+    padding-right: 38px;
   }
 }
 
 /* TELAS GRANDES — a partir de 1500px */
 @media (min-width: 1500px) {
   .hero-photo {
-    background-size: 100% 100%;
+    background-size: cover;
   }
+
   .hero-content {
-    padding-left: max(8%,calc((100vw - 1160px)/2));
+    padding-left: 38px;
+    padding-right: 38px;
   }
 }

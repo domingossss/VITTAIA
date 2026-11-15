@@ -55,8 +55,8 @@
 
 .map-art {
   @apply object-contain;
-  width: 48%;
-  height: 85px;
+  width: min(48%, 280px);
+  height: clamp(72px, 8vw, 110px);
 
 }
 
