@@ -200,7 +200,6 @@ export function initCheckout(modal) {
         <p>Diferente até no sabor.</p>
         <small>Demonstração concluída. Nenhuma compra foi realizada.</small>
       `);
-      notify('Demonstração concluída. Nenhum valor foi cobrado.', 'success');
     });
   });
 

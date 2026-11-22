@@ -71,6 +71,7 @@ export function fieldFeedback(field, message = '', shake = false) {
 }
 
 function errorMessage(field) {
+  if (field.validity.customError) return field.validationMessage;
   if (field.required && !field.value.trim()) return 'Preencha este campo.';
   if (field.validity.rangeOverflow || field.validity.rangeUnderflow || field.validity.stepMismatch) return `Use um número inteiro entre ${field.min || 1} e ${field.max}.`;
   return field.validity.valid ? '' : 'Confira o valor informado.';

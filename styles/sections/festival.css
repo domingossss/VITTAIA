@@ -1,22 +1,31 @@
-/* SEÇÃO: clube */
+/* SEÇÃO: festival */
 
 /* Regras comuns / computador */
 
-.club {
+.festival {
   @apply text-center;
   padding-right: 70px;
   padding-left: 70px;
   max-width: 1240px;
+  background: var(--paper);
   padding-top: 38px;
   padding-bottom: 44px;
 }
 
-.club>p {
+.festival>p {
   font-size: 16px;
   margin-right: 0;
   margin-left: 0;
   margin-top: 12px;
   margin-bottom: 24px;
+}
+
+.festival .steps article,
+.festival .steps article > img {
+  opacity: 1;
+  filter: none;
+  mix-blend-mode: normal;
+  background: transparent;
 }
 
 .steps article>div {
@@ -37,7 +46,7 @@
   margin-top: 6px;
 }
 
-.club>.button {
+.festival>.button {
   padding-top: 8px;
   padding-right: 34px;
   padding-bottom: 8px;
@@ -45,26 +54,35 @@
   margin-top: 21px;
 }
 
-.club>small {
+.festival>small {
   color: #777;
   font-size: 9px;
   margin-top: 4px;
 }
 
-.club h2 {
+.festival h2 {
   font-size: clamp(29px,3.3vw,42px);
   line-height: 1.1;
 }
 
 /* CELULAR — até 780px */
 @media (max-width: 780px) {
-  .club {
+  .festival {
     padding-top: 31px;
     padding-right: 22px;
     padding-bottom: 36px;
     padding-left: 22px;
   }
-  .club>p {
+
+  .festival .steps {
+    padding: 0;
+  }
+
+  .festival::before,
+  .festival::after {
+    display: none;
+  }
+  .festival>p {
     font-size: 13px;
     line-height: 1.4;
     margin-bottom: 22px;
@@ -87,7 +105,12 @@
     font-size: 11px;
     line-height: 1.3;
   }
-  .club h2 {
+  .festival-heading img {
+    width: 124px;
+  }
+
+  .festival-heading h2,
+  .festival h2 {
     font-size: 29px;
     line-height: 1.12;
   }
@@ -95,13 +118,13 @@
 
 /* TABLET — 781px a 1100px */
 @media (min-width: 781px) and (max-width: 1100px) {
-  .club {
+  .festival {
     padding-left: 80px;
     padding-right: 80px;
     padding-top: 30px;
     padding-bottom: 36px;
   }
-  .club>p {
+  .festival>p {
     font-size: 14px;
   }
   
@@ -115,14 +138,14 @@
   .steps p {
     font-size: 11px;
   }
-  .club>.button {
+  .festival>.button {
     padding-top: 7px;
     padding-right: 29px;
     padding-bottom: 7px;
     padding-left: 29px;
     font-size: 13px;
   }
-  .club h2 {
+  .festival h2 {
     font-size: 32px;
   }
 }

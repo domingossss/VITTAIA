@@ -51,7 +51,8 @@ dialog label {
   font-size: 13px;
 }
 
-dialog select {
+dialog select,
+dialog #festival-registration input {
   @apply w-full;
   margin-top: 8px;
   margin-right: 0;
@@ -64,6 +65,45 @@ dialog select {
   border: 1px solid #b8cbb5;
   border-radius: 8px;
   font: inherit;
+}
+
+.festival-purchase-date {
+  min-width: 0;
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+}
+
+.festival-purchase-date legend {
+  font-weight: 600;
+}
+
+.festival-date-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 10px;
+}
+
+.festival-date-fields label {
+  margin-top: 8px;
+}
+
+.festival-date-fields :is(input, select) {
+  min-width: 0;
+  min-height: 44px;
+  font-size: 16px;
+}
+
+#festival-today {
+  min-height: 44px;
+  padding: 8px 12px;
+}
+
+@media (max-width: 420px) {
+  .festival-date-fields {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
 }
 
 dialog small {

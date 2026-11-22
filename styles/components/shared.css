@@ -4,11 +4,11 @@
 
 .button {
   @apply inline-flex items-center justify-center font-bold;
-
+  position: relative;
   gap: 8px;
-  background: linear-gradient(#ffd91a,#ffbc00);
-  border: 1px solid #f6bd02;
-  border-radius: 50px;
+  background: var(--yellow);
+  border: 1px solid #e8b800;
+  border-radius: 999px;
   padding-top: 11px;
   padding-right: 27px;
   padding-bottom: 11px;
@@ -60,9 +60,9 @@ input:focus-visible {
 }
 
 .green {
-  background: linear-gradient(#479b28,#267b19);
+  background: var(--green);
   color: #fff;
-  border-color: #3a8d24;
+  border-color: var(--green);
 }
 
 .button-outline {

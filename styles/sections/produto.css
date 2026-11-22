@@ -12,7 +12,7 @@
   padding-right: 0;
   padding-bottom: 85px;
   padding-left: 0;
-  background: radial-gradient(ellipse at 72% 35%,#fff3be,#ffdf78);
+  background: linear-gradient(135deg, #fff0b3 0%, #ffd96a 58%, #f3b63d 100%);
   z-index: auto;
 
 }
@@ -53,10 +53,10 @@
   margin-right: auto;
   margin-bottom: auto;
   margin-left: auto;
-  mix-blend-mode: multiply;
-  mask-image: url('../assets/shapes/produto-01.svg'),linear-gradient(0deg,transparent,#000 6%,#000 96%,transparent);
-  mask-composite: intersect;
-  mask-size: 100% 100%;
+  mix-blend-mode: normal;
+  mask-image: none;
+  mask-composite: unset;
+  mask-size: auto;
   mask-repeat: no-repeat;
 }
 

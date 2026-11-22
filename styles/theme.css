@@ -3,12 +3,17 @@
 /* Regras comuns / computador */
 
 :root {
-  --cream: #fff6e3;
-  --green: #0c3f1c;
-  --yellow: #ffcc00;
-  --orange: #ed8300;
+  --cream: #fff7e6;
+  --paper: #fffdf8;
+  --green: #103f24;
+  --green-deep: #082d1a;
+  --leaf: #4c8a3f;
+  --yellow: #ffd23f;
+  --orange: #ef8b24;
+  --ink-soft: #4c624f;
   --ease-out: cubic-bezier(.22, 1, .36, 1);
   --surface: #fffdf8;
-  --line: #16452618;
-  --shadow-soft: 0 2px 4px #123d1d04, 0 12px 28px #123d1d08, 0 28px 60px #123d1d06;
+  --line: #1645261f;
+  --shadow-soft: 0 2px 4px #123d1d05, 0 16px 34px #123d1d0c, 0 32px 70px #123d1d08;
+  --shadow-lift: 0 14px 30px #123d1d14, 0 30px 70px #123d1d0c;
 }
