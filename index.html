@@ -40,7 +40,7 @@
         <div class="site-container hero-content">
           <p class="eyebrow">Experimente <span></span></p>
           <h1>O refrigerante<br>orgânico <em>de Uvaia</em></h1>
-          <h2>Sabor natural da Mata Atlântica,<br>com leveza e mais bem-estar.</h2>
+          <h2>Sabor natural da Mata Atlântica,<br>com mais leveza e bem-estar.</h2>
           <div class="actions">
             <a class="button button-outline" href="#uvaia">Conheça</a>
             <a class="button hero-secondary" href="#comprar">Quero experimentar</a>
@@ -91,7 +91,7 @@
       <section id="produto" class="product">
         <div class="site-container product-grid">
           <div class="pack-visual">
-            <img src="assets/images/pack-layout.png" alt="Pack VITTAIA ao lado de uma lata e frutas Uvaia" loading="lazy">
+            <img src="assets/images/pack-layout.png" alt="Pack VITTAIA ao lado de uma lata e frutas Uvaia" width="1647" height="955" loading="lazy">
           </div>
           <div>
             <h2>Para quem <em>cuida</em> do que consome,<br>Mas não abre mão do que <em>gosta</em></h2>
@@ -132,24 +132,24 @@
         <p>Compre seu pack, cadastre a nota fiscal e concorra a um ingresso.</p>
         <div class="steps grid grid-cols-1 gap-[17px] desktop:grid-cols-3 desktop:gap-[34px]">
           <article class="grid grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
-            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/festival-pack.png" alt="Pack VITTAIA sobre a mesa" loading="lazy">
+            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/festival-pack.png" alt="Pack VITTAIA sobre a mesa" width="1672" height="941" loading="lazy">
             <div>
               <h3>1. Adquira seu pack</h3>
-              <p>Compre um pack participante<br>de Vittaia e garanta sua participação na promoção.</p>
+              <p>Compre um pack Vittaia<br>e garanta sua participação na promoção.</p>
             </div>
           </article>
           <article class="grid grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
-            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/nota-fiscal.jpg" alt="Nota fiscal da compra da VITTAIA" loading="lazy">
+            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/nota-fiscal.jpg" alt="Nota fiscal da compra da VITTAIA" width="1536" height="1024" loading="lazy">
             <div>
               <h3>2. Cadastre sua nota fiscal</h3>
               <p>Cadastre os dados da sua nota fiscal e participe do sorteio.</p>
             </div>
           </article>
           <article class="grid grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
-            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/festival.jpg" alt="Público aproveitando um festival" loading="lazy">
+            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/festival.jpg" alt="Público aproveitando um festival" width="1536" height="1024" loading="lazy">
             <div>
               <h3>3. Aproveite a experiência</h3>
-              <p>Se contemplado aproveite o festival e celebre o momento com Vittaia.</p>
+              <p>Se contemplado, aproveite o festival e celebre o momento com Vittaia.</p>
             </div>
           </article>
         </div>
@@ -228,7 +228,7 @@
             </div>
           </div>
           <div class="find-bottom flex items-center justify-between mt-2.5 gap-3 desktop:gap-[22px]">
-            <img class="map-art" src="assets/images/map-layout.png" alt="Mapa ilustrativo com pontos de localização" loading="lazy">
+            <img class="map-art" src="assets/images/map-layout.png" alt="Mapa ilustrativo com pontos de localização" width="1672" height="941" loading="lazy">
             <div>
               <h3>Quer encontrar<br>perto de você?</h3>
               <button class="button small" id="locations">Ver pontos de venda</button>
@@ -262,7 +262,7 @@
             <p>Mais praticidade para o seu dia a dia.</p>
           </div>
           <div class="order">
-            <img class="order-image" src="assets/images/order-layout.png" alt="Caixa e lata do pack VITTAIA" loading="lazy">
+            <img class="order-image" src="assets/images/order-layout.png" alt="Caixa e lata do pack VITTAIA" width="1429" height="1100" loading="lazy">
             <div class="order-info">
               <h3>Pack VITTAIA</h3>
               <p>Refrigerante Orgânico de Uvaia<br>6 latas de 269 ml cada</p>
@@ -285,8 +285,6 @@
               </form>
               <p id="shipping-result" role="status">Digite seu CEP para preencher o endereço.</p>
               <p class="total" id="total"></p>
-              <button class="button" id="checkout">Comprar agora</button>
-              <small>♙ Compra demonstrativa · Sem cobrança real</small>
             </div>
             <form class="address-panel" id="delivery-address" aria-labelledby="address-title" hidden>
               <h3 id="address-title">Seu endereço de entrega</h3>
@@ -319,6 +317,10 @@
               </div>
               <small>Endereço consultado pelo CEP. Dados usados apenas nesta simulação.</small>
             </form>
+            <div class="order-actions order-confirmation">
+              <button class="button" id="checkout" type="button">Comprar agora</button>
+              <small>♙ Compra demonstrativa · Sem cobrança real</small>
+            </div>
           </div>
         </div>
       </section>
@@ -344,9 +346,8 @@
           <span>@vittaia · contato ilustrativo</span>
         </div>
       </div>
-      <p class="legal">© 2026 VITTAIA · Marca fictícia desenvolvida para fins acadêmicos — Trabalho de Conclusão de Curso.<br>Produto, preços, depoimentos e comercialização apresentados de forma demonstrativa.</p>
+      <p class="legal">© 2026 VITTAIA · Marca fictícia desenvolvida para fins acadêmicos — Trabalho de Conclusão de Curso.<br>Produto, preços, depoimentos e comercialização apresentados de forma demonstrativa.<br>Desenvolvido por Victor Domingos<br>Estudante de GTI</p>
     </footer>
-    <a class="mobile-buy button" href="#comprar">Seu pack com 6 latas · R$ 48,00 <span>Comprar →</span></a>
     <dialog id="modal">
       <button class="close" aria-label="Fechar janela">×</button>
       <div id="modal-content">

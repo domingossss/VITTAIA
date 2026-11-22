@@ -200,6 +200,11 @@
   padding-top: 20px;
 }
 
+.order .order-confirmation {
+  grid-column: 1 / -1;
+  padding: 12px 0 0;
+}
+
 .address-panel[hidden] {
   display: none;
 }

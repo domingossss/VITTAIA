@@ -64,6 +64,19 @@ export function initCheckout(modal) {
     shippingResult.dataset.state = type;
   }
 
+  function scrollToAddress() {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (addressForm.hidden) return;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        addressForm.scrollIntoView({
+          block: 'start',
+          behavior: reduceMotion ? 'instant' : 'smooth',
+        });
+      });
+    });
+  }
+
   async function consultPostalCode() {
     const digits = postalCode.value.replace(/\D/g, '');
     freight = estimateShipping(digits);
@@ -76,6 +89,7 @@ export function initCheckout(modal) {
     }
     if (verifiedCep === digits) {
       status(`Endereço encontrado. ${freightText()}`, 'success');
+      scrollToAddress();
       return;
     }
     request?.abort();
@@ -96,10 +110,11 @@ export function initCheckout(modal) {
         ? 'Confira o endereço e complete o número e o complemento, se houver.'
         : 'Este CEP não informa todos os campos. Complete o logradouro, o bairro e o número.';
       if (addressForm.animate && !motionPreference.matches) {
-        addressForm.animate([{ opacity: 0, transform: 'translateY(-8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 260, easing: 'ease-out' });
+        addressForm.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 260, easing: 'ease-out' });
       }
       status(`Endereço encontrado. ${freightText()}`, 'success');
       notify('Endereço encontrado. Complete o número e confira seus dados.', 'success');
+      scrollToAddress();
     } catch (error) {
       if (request !== controller) return;
       clearAddress();
@@ -132,8 +147,11 @@ export function initCheckout(modal) {
     document.querySelector('#plus').disabled = order.packs >= product.maxPacks;
   }
 
-  document.querySelector('.mobile-buy').innerHTML =
-    `Seu pack com ${product.cansPerPack} latas · ${money(product.price)} <span>Comprar →</span>`;
+  const mobileBuy = document.querySelector('.mobile-buy');
+  if (mobileBuy) {
+    mobileBuy.innerHTML =
+      `Seu pack com ${product.cansPerPack} latas · ${money(product.price)} <span>Comprar →</span>`;
+  }
 
   quantity.addEventListener('change', update);
   document.querySelector('#minus').addEventListener('click', () => {
