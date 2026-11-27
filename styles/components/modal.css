@@ -138,3 +138,11 @@ dialog {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 420px) {
+  dialog {
+    width: calc(100% - 20px);
+    padding: 28px 18px 22px;
+    border-radius: 20px;
+  }
+}

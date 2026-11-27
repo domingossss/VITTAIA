@@ -283,6 +283,16 @@
   }
 }
 
+@media (max-width: 420px) {
+  .swoosh {
+    width: 150px;
+    max-width: 100%;
+  }
+  .review-cards article {
+    flex-basis: 88%;
+  }
+}
+
 /* TABLET — 781px a 1100px */
 @media (min-width: 781px) and (max-width: 1100px) {
   .testimonials {
@@ -290,25 +300,25 @@
     padding-bottom: 48px;
   }
   .reviews {
-    padding-left: 46px;
-    padding-right: 46px;
-    gap: 26px;
+    padding-left: 34px;
+    padding-right: 34px;
+    gap: 24px;
   }
   .review-title h2 {
     font-size: 30px;
   }
   .review-cards article {
-    padding-top: 10px;
-    padding-right: 14px;
-    padding-bottom: 10px;
-    padding-left: 14px;
+    padding-top: 12px;
+    padding-right: 15px;
+    padding-bottom: 12px;
+    padding-left: 15px;
   }
   .review-cards h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
   .review-cards p {
-    font-size: 10px;
-    min-height: 40px;
+    font-size: 12px;
+    min-height: 44px;
   }
 }
 

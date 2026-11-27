@@ -115,9 +115,6 @@ body:has(dialog[open]) {
   html {
     scroll-padding-top: 76px;
   }
-  body {
-    padding-bottom: 65px;
-  }
 }
 
 /* Acessibilidade: movimento reduzido */

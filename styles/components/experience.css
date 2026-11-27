@@ -24,7 +24,11 @@ button:disabled:hover { transform: none; box-shadow: none; }
   background: linear-gradient(90deg, #478343, #ffca19 80%, #f29a20);
   transform: scaleX(0);
   transform-origin: left;
+  will-change: transform;
   pointer-events: none;
+}
+.about, .product, .festival, .duo, .testimonials, .buy, footer {
+  contain: layout style;
 }
 header {
   background: #fffdf8ed;
@@ -152,4 +156,46 @@ html[data-motion="reduced"], html[data-motion="reduced"] *, html[data-motion="re
 }
 html[data-motion="reduced"] :is(.button, .steps article, .stores>div, .steps img):is(:hover, :active) { transform: none!important; translate: none!important; }
 .reveal-pending { opacity: 0; }
-html[data-motion="reduced"] .reveal-pending { opacity: 1; }
+html[data-motion="reduced"] .reveal-pending,
+html[data-performance="lite"] .reveal-pending { opacity: 1; }
+
+/* Modo leve para dispositivos com menos RAM/CPU, economia de dados ou movimento reduzido */
+html[data-performance="lite"] {
+  --shadow-soft: 0 4px 12px #123d1d0e;
+  --shadow-lift: 0 8px 20px #123d1d14;
+}
+html[data-performance="lite"] :is(header, header.is-scrolled, nav, .button-outline, .stores>div, .review-cards article, dialog, dialog::backdrop, .toast) {
+  -webkit-backdrop-filter: none!important;
+  backdrop-filter: none!important;
+}
+html[data-performance="lite"] header,
+html[data-performance="lite"] header.is-scrolled {
+  background: #fffdf8fa;
+}
+html[data-performance="lite"] nav {
+  background: #fffdf5;
+}
+html[data-performance="lite"] .stores>div {
+  background: #ffffffeb;
+}
+html[data-performance="lite"] .review-cards article {
+  background: #0d5029e6;
+  box-shadow: 0 4px 14px #002e1824;
+}
+html[data-performance="lite"] dialog {
+  background: #fffef9;
+  box-shadow: 0 12px 32px #001d1838;
+}
+html[data-performance="lite"] dialog::backdrop {
+  background: #09241ad9;
+}
+html[data-performance="lite"] .toast {
+  background: #fffef8;
+  box-shadow: 0 6px 18px #153e1e1c;
+}
+html[data-performance="lite"] .hero-forest {
+  filter: none;
+}
+html[data-performance="lite"] .button::after {
+  display: none;
+}

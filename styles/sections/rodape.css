@@ -81,6 +81,16 @@ footer {
   }
 }
 
+@media (max-width: 420px) {
+  .footer-grid > a,
+  .tagline {
+    grid-column: 1 / -1;
+  }
+  .tagline {
+    padding-left: 14px;
+  }
+}
+
 /* TABLET — 781px a 1100px */
 @media (min-width: 781px) and (max-width: 1100px) {
   .footer-grid {

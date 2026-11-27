@@ -20,7 +20,7 @@ export function initLocations(modal) {
       <ul class="location-cities" aria-label="Cidades previstas para comercialização">
         ${cities.map((city) => `<li>${city}</li>`).join('')}
       </ul>
-      <p>Em cada cidade, a proposta é chegar a empórios naturais, lojas de orgânicos, mercados selecionados e cafés.</p>
+      <p>Em cada cidade, a proposta é chegar a lojas de produtos naturais, supermercados, conveniências e empórios.</p>
       <small>Distribuição fictícia para o projeto acadêmico. Não há lojas, endereços ou pontos de venda confirmados.</small>
       <a class="button" href="#comprar" id="go-buy">Conhecer o pack</a>
     `);

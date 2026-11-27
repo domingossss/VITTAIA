@@ -225,6 +225,10 @@
   gap: 14px;
 }
 
+.address-grid > div {
+  min-width: 0;
+}
+
 .address-street { grid-column: span 9; }
 .address-number { grid-column: span 3; }
 .address-complement { grid-column: 1 / -1; }
@@ -392,6 +396,24 @@
   }
 }
 
+@media (max-width: 480px) {
+  .order {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .order-image {
+    height: 150px;
+  }
+  .order-info {
+    border-left: 0;
+    border-top: 1px solid #58975a33;
+    padding: 14px 0 0;
+  }
+  .order-actions {
+    padding-top: 4px;
+  }
+}
+
 /* TABLET — 781px a 1100px */
 @media (min-width: 781px) and (max-width: 1100px) {
   .buy {
@@ -399,17 +421,17 @@
     padding-bottom: 30px;
   }
   .buy-grid {
-    padding-left: 43px;
-    padding-right: 43px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
   .buy-heading>p:last-child {
     font-size: 12px;
   }
   .order {
-    padding-top: 12px;
-    padding-right: 12px;
-    padding-bottom: 12px;
-    padding-left: 12px;
+    padding-top: 14px;
+    padding-right: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
   }
   .order-image {
     height: 135px;
@@ -419,28 +441,35 @@
     padding-right: 10px;
   }
   .order-info h3 {
-    font-size: 13px;
+    font-size: 14px;
   }
   .order-info p {
-    font-size: 10px;
+    font-size: 11px;
   }
   .quantity {
-    font-size: 9px;
+    font-size: 10px;
   }
   .quantity button {
-    width: 18px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
   }
   .price {
     font-size: 29px;
   }
   .order-actions {
-    padding-left: 7px;
+    padding-left: 9px;
   }
   .order-actions small {
-    font-size: 8px;
+    font-size: 9px;
   }
   .buy-heading h2 {
     font-size: 32px;
+  }
+}
+
+@media (min-width: 781px) and (max-width: 1020px) {
+  .buy-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

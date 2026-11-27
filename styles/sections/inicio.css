@@ -17,7 +17,7 @@
   @apply absolute;
   z-index: -2;
   inset: 0;
-  background: url('../assets/images/hero.jfif') center center/cover no-repeat;
+  background: url('../assets/images/hero-desktop.jpg') center center/cover no-repeat;
   left: 0;
   width: 100%;
   background-size: cover;
@@ -99,7 +99,7 @@
 
   inset: 0 43% 0 0;
   z-index: -2;
-  background: url('../assets/images/forest-layout.png') center/100% 100%;
+  background: url('../assets/images/forest-layout.jpg') center/100% 100%;
   filter: blur(2px);
 }
 
@@ -143,13 +143,13 @@
 /* CELULAR — até 780px */
 @media (max-width: 780px) {
   .hero {
-    @apply h-auto;
-    min-height: clamp(520px, 142vw, 640px);
-    height: clamp(520px, 142vw, 640px);
+    height: auto;
+    min-height: clamp(460px, 128vw, 600px);
   }
 
   .hero-photo {
     inset: 0;
+    background-image: url('../assets/images/hero-mobile.jpg');
     background-position: 62% center;
     background-size: cover;
   }
@@ -164,7 +164,7 @@
     margin: 0;
     padding-right: 22px;
     padding-left: 22px;
-    padding-bottom: clamp(180px, 42vw, 240px);
+    padding-bottom: clamp(140px, 38vw, 220px);
   }
 
   .hero h2 {
@@ -212,18 +212,15 @@
     padding-left: 17px;
   }
 
-  .hero .hero-forest {
-    right: 0 !important;
-  }
-
   .hero .hero-photo {
     top: 0;
     mask-image: none;
     background-position: 62% center;
   }
 
+  .hero .hero-forest,
   .hero-forest {
-    inset: 0;
+    display: none;
   }
 
   .hero:before {
@@ -254,7 +251,13 @@
 /* TABLET — 781px a 1100px */
 @media (min-width: 781px) and (max-width: 1100px) {
   .hero {
-    height: 340px;
+    height: auto;
+    min-height: 390px;
+  }
+
+  .hero-content {
+    padding-top: 34px !important;
+    padding-bottom: 58px;
   }
 
   .hero h2 {

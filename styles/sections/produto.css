@@ -248,6 +248,33 @@
   }
 }
 
+@media (max-width: 540px) {
+  .product h2 {
+    font-size: clamp(25px, 7.2vw, 30px);
+  }
+  .features {
+    grid-template-columns: 1fr;
+  }
+  .features article {
+    @apply flex items-start;
+    border-right: 0;
+    border-bottom: 1px solid #e9ae3b80;
+    padding: 12px 0;
+    gap: 12px;
+  }
+  .features article:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .features i {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .features strong br {
+    display: none;
+  }
+}
+
 /* TABLET — 781px a 1100px */
 @media (min-width: 781px) and (max-width: 1100px) {
   .product {

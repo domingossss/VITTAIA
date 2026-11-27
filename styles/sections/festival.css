@@ -119,8 +119,8 @@
 /* TABLET — 781px a 1100px */
 @media (min-width: 781px) and (max-width: 1100px) {
   .festival {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 36px;
+    padding-right: 36px;
     padding-top: 30px;
     padding-bottom: 36px;
   }

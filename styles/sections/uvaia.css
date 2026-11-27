@@ -19,7 +19,7 @@
   @apply self-center min-h-0;
   width: 100%;
   min-width: 0;
-  background: url('../assets/images/uvaia.png') center/cover no-repeat;
+  background: url('../assets/images/uvaia-photo.jpg') center/cover no-repeat;
   border: 0;
 
   height: clamp(260px, 24vw, 360px);
@@ -162,6 +162,13 @@
   }
 }
 
+@media (max-width: 420px) {
+  .benefits article {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
 /* TABLET — 781px a 1100px */
 @media (min-width: 781px) and (max-width: 1100px) {
   .about {
@@ -195,7 +202,8 @@
     font-size: 8px;
   }
   .about h2 {
-    font-size: 33px;
+    @apply whitespace-normal;
+    font-size: clamp(26px, 3.6vw, 33px);
   }
   .benefits .icon {
     height: 31px;

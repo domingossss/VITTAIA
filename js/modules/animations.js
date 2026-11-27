@@ -1,5 +1,5 @@
 import { animation } from '../config.js';
-import { motionPreference } from './motion.js';
+import { isLitePerformance, motionPreference } from './motion.js';
 
 // Itens que aparecem ao rolar. Adicione seletores aqui para animar novos blocos.
 const selectors = [
@@ -15,13 +15,16 @@ const selectors = [
 ];
 
 export function initReveal() {
-  if (!('IntersectionObserver' in window) || !Element.prototype.animate) return;
+  if (isLitePerformance || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
   const targets = [...document.querySelectorAll(selectors.join(','))];
   const animations = new Set();
   const delays = new Map();
-  targets.forEach(element => {
-    const siblings = targets.filter(target => target.parentElement === element.parentElement);
-    delays.set(element, Math.min(siblings.indexOf(element) * animation.stagger, animation.maxDelay));
+  const siblingCounts = new Map();
+  targets.forEach((element) => {
+    const parent = element.parentElement;
+    const index = siblingCounts.get(parent) || 0;
+    siblingCounts.set(parent, index + 1);
+    delays.set(element, Math.min(index * animation.stagger, animation.maxDelay));
   });
 
   const observer = new IntersectionObserver((entries) => {

@@ -9,6 +9,11 @@
     <link rel="icon" type="image/png" href="assets/images/logo.png" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="assets/images/logo_branca.png" media="(prefers-color-scheme: dark)">
     <meta name="description" content="Conheça a VITTAIA: a personalidade da Uvaia em um refrigerante orgânico. Projeto demonstrativo para fins acadêmicos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="preload" as="image" href="assets/images/hero-mobile.jpg" media="(max-width: 780px)" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/hero-desktop.jpg" media="(min-width: 781px)" fetchpriority="high">
     <link rel="stylesheet" href="styles/site.css">
   </head>
   <body class="font-sans text-forest bg-white">
@@ -16,7 +21,7 @@
     <!-- CABEÇALHO: logo e navegação -->
     <header>
       <div class="nav-wrap">
-        <a href="#inicio" aria-label="VITTAIA — início"><img class="logo" src="assets/images/logo.png" alt="VITTAIA"></a>
+        <a href="#inicio" aria-label="VITTAIA — início"><img class="logo" src="assets/images/logo.png" alt="VITTAIA" width="360" height="121" decoding="async"></a>
         <button class="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">☰</button>
         <nav id="nav" aria-label="Menu principal">
           <a href="#inicio">Início</a>
@@ -91,7 +96,7 @@
       <section id="produto" class="product">
         <div class="site-container product-grid">
           <div class="pack-visual">
-            <img src="assets/images/pack-layout.png" alt="Pack VITTAIA ao lado de uma lata e frutas Uvaia" width="1647" height="955" loading="lazy">
+            <img src="assets/images/pack-layout.png" alt="Pack VITTAIA ao lado de uma lata e frutas Uvaia" width="900" height="522" loading="lazy" decoding="async">
           </div>
           <div>
             <h2>Para quem <em>cuida</em> do que consome,<br>Mas não abre mão do que <em>gosta</em></h2>
@@ -131,22 +136,22 @@
         <h2>Concorra a um ingresso para festival</h2>
         <p>Compre seu pack, cadastre a nota fiscal e concorra a um ingresso.</p>
         <div class="steps grid grid-cols-1 gap-[17px] desktop:grid-cols-3 desktop:gap-[34px]">
-          <article class="grid grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
-            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/festival-pack.png" alt="Pack VITTAIA sobre a mesa" width="1672" height="941" loading="lazy">
+          <article class="grid grid-cols-1 min-[421px]:grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
+            <img class="block w-full object-cover h-[155px] min-[421px]:h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/festival-pack.jpg" alt="Pack VITTAIA sobre a mesa" width="760" height="428" loading="lazy" decoding="async">
             <div>
               <h3>1. Adquira seu pack</h3>
               <p>Compre um pack Vittaia<br>e garanta sua participação na promoção.</p>
             </div>
           </article>
-          <article class="grid grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
-            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/nota-fiscal.jpg" alt="Nota fiscal da compra da VITTAIA" width="1536" height="1024" loading="lazy">
+          <article class="grid grid-cols-1 min-[421px]:grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
+            <img class="block w-full object-cover h-[155px] min-[421px]:h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/nota-fiscal.jpg" alt="Nota fiscal da compra da VITTAIA" width="760" height="507" loading="lazy" decoding="async">
             <div>
               <h3>2. Cadastre sua nota fiscal</h3>
               <p>Cadastre os dados da sua nota fiscal e participe do sorteio.</p>
             </div>
           </article>
-          <article class="grid grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
-            <img class="block w-full object-cover h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/festival.jpg" alt="Público aproveitando um festival" width="1536" height="1024" loading="lazy">
+          <article class="grid grid-cols-1 min-[421px]:grid-cols-[42%_58%] items-center overflow-hidden rounded-[17px] border border-solid border-[#dbd2c5] bg-[#fffaf3] desktop:block motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-1">
+            <img class="block w-full object-cover h-[155px] min-[421px]:h-[140px] desktop:h-[149px] tablet:h-[112px]" src="assets/images/festival.jpg" alt="Público aproveitando um festival" width="760" height="507" loading="lazy" decoding="async">
             <div>
               <h3>3. Aproveite a experiência</h3>
               <p>Se contemplado, aproveite o festival e celebre o momento com Vittaia.</p>
@@ -166,7 +171,7 @@
               <thead>
                 <tr>
                   <th>Característica</th>
-                  <th><img class="logo" src="assets/images/logo.png" alt="VITTAIA"></th>
+                  <th><img class="logo" src="assets/images/logo.png" alt="VITTAIA" width="360" height="121" loading="lazy" decoding="async"></th>
                   <th>Refrigerante<br>tradicional*</th>
                 </tr>
               </thead>
@@ -205,30 +210,26 @@
         <section id="encontrar" class="find">
           <h2>Onde encontrar a <em>VITTAIA?</em></h2>
           <p>Uma proposta para estabelecimentos que valorizam produtos naturais e novos sabores.</p>
-          <div class="stores grid grid-cols-4 mt-3 gap-2 desktop:gap-[11px] tablet:gap-[9px]">
+          <div class="stores mt-3 gap-2 desktop:gap-[11px] tablet:gap-[9px]">
             <div>
-              <i data-icon="store">
-              </i>
-              <strong>Empórios<br>naturais</strong>
+              <img class="store-icon" src="assets/images/icone-produtos-naturais.png" alt="" aria-hidden="true" width="128" height="128" loading="lazy" decoding="async">
+              <strong>Produtos<br>Naturais</strong>
             </div>
             <div>
-              <i data-icon="leaf">
-              </i>
-              <strong>Lojas de produtos<br>orgânicos</strong>
+              <img class="store-icon" src="assets/images/icone-supermercados.png" alt="" aria-hidden="true" width="128" height="128" loading="lazy" decoding="async">
+              <strong>Supermercados</strong>
             </div>
             <div>
-              <i data-icon="cart">
-              </i>
-              <strong>Mercados<br>selecionados</strong>
+              <img class="store-icon" src="assets/images/icone-conveniencias.png" alt="" aria-hidden="true" width="128" height="128" loading="lazy" decoding="async">
+              <strong>Conveniências</strong>
             </div>
             <div>
-              <i data-icon="cup">
-              </i>
-              <strong>Cafés e espaços<br>saudáveis</strong>
+              <img class="store-icon" src="assets/images/icone-emporios.png" alt="" aria-hidden="true" width="128" height="128" loading="lazy" decoding="async">
+              <strong>Empórios</strong>
             </div>
           </div>
           <div class="find-bottom flex items-center justify-between mt-2.5 gap-3 desktop:gap-[22px]">
-            <img class="map-art" src="assets/images/map-layout.png" alt="Mapa ilustrativo com pontos de localização" width="1672" height="941" loading="lazy">
+            <img class="map-art" src="assets/images/map-layout.png" alt="Mapa ilustrativo com pontos de localização" width="560" height="315" loading="lazy" decoding="async">
             <div>
               <h3>Quer encontrar<br>perto de você?</h3>
               <button class="button small" id="locations">Ver pontos de venda</button>
@@ -262,7 +263,7 @@
             <p>Mais praticidade para o seu dia a dia.</p>
           </div>
           <div class="order">
-            <img class="order-image" src="assets/images/order-layout.png" alt="Caixa e lata do pack VITTAIA" width="1429" height="1100" loading="lazy">
+            <img class="order-image" src="assets/images/order-layout.png" alt="Caixa e lata do pack VITTAIA" width="560" height="431" loading="lazy" decoding="async">
             <div class="order-info">
               <h3>Pack VITTAIA</h3>
               <p>Refrigerante Orgânico de Uvaia<br>6 latas de 269 ml cada</p>
@@ -328,7 +329,7 @@
     <!-- RODAPÉ: navegação, marca e informações legais -->
     <footer>
       <div class="site-container footer-grid">
-        <a class="inline-flex items-center" href="#inicio" aria-label="VITTAIA — início"><img class="logo_branca block h-auto w-[145px] max-w-full desktop:w-[158px]" src="assets/images/logo_branca.png" alt="VITTAIA"></a>
+        <a class="inline-flex items-center" href="#inicio" aria-label="VITTAIA — início"><img class="logo_branca block h-auto w-[145px] max-w-full desktop:w-[158px]" src="assets/images/logo_branca.png" alt="VITTAIA" width="320" height="324" loading="lazy" decoding="async"></a>
         <p class="tagline">Diferente até no sabor.</p>
         <div>
           <a href="#inicio">Início</a>
